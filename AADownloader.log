@@ -1,0 +1,3 @@
+19:42:34.808 [JavaFX Application Thread] INFO  com.svalero.downloader.controller.DownloadController - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 creada
+19:42:45.987 [Thread-5] TRACE com.svalero.downloader.controller.DownloadController - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 iniciada
+19:43:03.390 [Thread-5] TRACE com.svalero.downloader.controller.DownloadController - Descarga cancelada

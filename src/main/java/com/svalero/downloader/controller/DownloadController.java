@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
+
 
 public class DownloadController implements Initializable {
 
@@ -38,7 +40,7 @@ public class DownloadController implements Initializable {
     private JSONArray message;
     private DownloadTask downloadTask;
 
-    private static final Logger logger = LogManager.getLogger(DownloadController.class);
+    Logger logger = LogManager.getLogger(DownloadController.class);
 
     public DownloadController(String urlText) {
         logger.info("Descarga " + urlText + " creada");
@@ -97,9 +99,10 @@ public class DownloadController implements Initializable {
 
             downloadTask.messageProperty().addListener((observableValue, oldValue, newValue) -> {
                 message = new JSONArray(newValue);
-                lbStatus.setText(message.get(2).toString());
                 lbSize.setText(message.get(0).toString());
                 lbProgress.setText(message.get(1).toString());
+                lbStatus.setText(message.get(2).toString());
+
 
             });
 

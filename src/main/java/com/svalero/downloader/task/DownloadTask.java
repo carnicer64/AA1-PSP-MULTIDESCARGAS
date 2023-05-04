@@ -24,7 +24,6 @@ public class DownloadTask extends Task<Integer> {
 
     private static final Logger logger = LogManager.getLogger(DownloadController.class);
 
-
     public DownloadTask(String urlText, File file) throws MalformedURLException {
         this.url = new URL(urlText);
         this.file = file;
@@ -53,7 +52,8 @@ public class DownloadTask extends Task<Integer> {
             fileOutputStream.write(dataBuffer, 0, bytesRead);
             totalRead += bytesRead;
 
-            downloadProgress = Math.round(((double) totalRead / fileSize) * 100) / 100;
+
+            downloadProgress = Math.round(((double) totalRead / fileSize) * 100) / 100d;
             double totalMb = totalRead / 1048576;
             jsonArray.put(1,totalMb);
             jsonArray.put(2,downloadProgress * 100 + " %");
@@ -61,7 +61,9 @@ public class DownloadTask extends Task<Integer> {
             updateMessage(String.valueOf(jsonArray));
 
             if (isCancelled()) {
-                logger.trace("Descarga " + url.toString() + " cancelada");
+                logger.trace("Descarga cancelada");
+                updateProgress(0, 0);
+                jsonArray.put(2, "Cancelada");
                 return null;
             }
         }

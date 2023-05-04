@@ -51,7 +51,7 @@
                   <Button fx:id="btDown" layoutX="26.0" layoutY="80.0" mnemonicParsing="false" onAction="#startDownload" text="DESCARGAR" />
                   <Button fx:id="btCanAll" layoutX="174.0" layoutY="80.0" mnemonicParsing="false" onAction="#stopAllDownloads" text="CANCELAR TODO" />
                   <Button layoutX="349.0" layoutY="80.0" mnemonicParsing="false" onAction="#downloadFromFile" prefHeight="25.0" prefWidth="230.0" text="DESCARGA DESDE FICHERO" />
-                  <TabPane fx:id="tpDown" layoutX="4.0" layoutY="107.0" prefHeight="257.0" prefWidth="631.0" tabClosingPolicy="UNAVAILABLE" />
+                  <TabPane fx:id="tpDown" layoutX="4.0" layoutY="107.0" prefHeight="257.0" prefWidth="631.0" tabClosingPolicy="ALL_TABS" />
                   <Button fx:id="btLog" layoutX="544.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLog" text="LOG" />
                </children>
             </AnchorPane>

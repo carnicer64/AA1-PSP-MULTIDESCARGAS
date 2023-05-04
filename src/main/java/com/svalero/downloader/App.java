@@ -20,6 +20,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
+        System.out.println(R.getUI("splashScreen.fxml"));
         loader.setLocation(R.getUI("splashScreen.fxml"));
         loader.setController(new SplashScreenController());
 

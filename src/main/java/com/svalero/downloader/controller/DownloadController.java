@@ -1,7 +1,6 @@
 package com.svalero.downloader.controller;
 
 import com.svalero.downloader.task.DownloadTask;
-import javafx.concurrent.Worker.State;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

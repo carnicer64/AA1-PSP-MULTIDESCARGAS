@@ -49,8 +49,8 @@
                 <version>3.8.0</version>
                 <configuration>
                     <release>17</release>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>16</source>
+                    <target>16</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -58,7 +58,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>com.svalero.multidescargas.App</mainClass>
+                    <mainClass>com.svalero.downloader.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>
